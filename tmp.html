@@ -4,16 +4,24 @@
         <title>畢業照</title>
     </head>
     <body>
+        <form action="http://photo.colorweb.com.tw/connect_find.php" METHOD="POST" style="float:left ;margin:0 100px 0 0">
+            <div class='b_center t_center text_font font_f' style="padding:0 0 0 0">
+                金鑰密碼：<input TYPE="text" NAME="key" size="20" value="" style="font-size:16pt">
+            </div><br>
+            <div style="float:right">
+                <input class='button font_f' name= "button" TYPE="submit" value="確認" >
+            </div>
+        </form>
     </body>         
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/javascript">
+    <script id="test" type="text/javascript">
     var p_dir = "All_photo/108/國立臺北護理健康大學(校)/15-資四四A/ebook";
     var arr=["IMG_6421-15-\u8cc7\u56db\u56dbA-01.JPG","IMG_6425-15-\u8cc7\u56db\u56dbA-02.JPG","IMG_6427-15-\u8cc7\u56db\u56dbA-03.JPG","IMG_6429-15-\u8cc7\u56db\u56dbA-04.JPG","IMG_6431-15-\u8cc7\u56db\u56dbA-05.JPG","IMG_6434-15-\u8cc7\u56db\u56dbA-06.JPG","IMG_6437-15-\u8cc7\u56db\u56dbA-07.JPG","IMG_6442-15-\u8cc7\u56db\u56dbA-08.JPG","IMG_6445-15-\u8cc7\u56db\u56dbA-09.JPG","IMG_6447-15-\u8cc7\u56db\u56dbA-10.JPG","IMG_6449-15-\u8cc7\u56db\u56dbA-11.JPG","IMG_6452-15-\u8cc7\u56db\u56dbA-12.JPG","IMG_6454-15-\u8cc7\u56db\u56dbA-13.JPG","IMG_6456-15-\u8cc7\u56db\u56dbA-14.JPG","IMG_6457-15-\u8cc7\u56db\u56dbA-15.JPG","IMG_6462-15-\u8cc7\u56db\u56dbA-16.JPG","IMG_6463-15-\u8cc7\u56db\u56dbA-17.JPG","IMG_6465-15-\u8cc7\u56db\u56dbA-18.JPG","IMG_6467-15-\u8cc7\u56db\u56dbA-19.JPG","IMG_6470-15-\u8cc7\u56db\u56dbA-20.JPG","IMG_6473-15-\u8cc7\u56db\u56dbA-21.JPG","IMG_6475-15-\u8cc7\u56db\u56dbA-22.JPG","IMG_6476-15-\u8cc7\u56db\u56dbA-23.JPG","IMG_6477-15-\u8cc7\u56db\u56dbA-24.JPG"];
     $(function(){
         for ( var i=0 ; i<arr.length ; i++ ){
             var url = "http://photo.colorweb.com.tw/" + p_dir + "/" + arr[i];
-            document.write("<a href='#' onclick=\"window.open('" + url + "', '畢業照');\">" + arr[i] + "</a><br>");
+            document.write("<a href='#' onclick=\"window.open('" + url + "', '畢業照',config='height=500,width=500');\">" + arr[i] + "</a><br>");
         }
-    })
-    </script>
+    })//'8f182abafd8b'
+    </script>        
 </html>
